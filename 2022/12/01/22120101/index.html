@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding Robust Overﬁtting of Adversarial Training and Beyond">
+<meta property="og:url" content="http://example.com/2022/12/01/22120101/index.html">
+<meta property="og:site_name" content="Sam&#39;s blog">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-01T12:16:27.000Z">
+<meta property="article:modified_time" content="2022-12-01T13:39:52.577Z">
+<meta property="article:author" content="Sam">
+<meta property="article:tag" content="encrypted">
+<meta property="article:tag" content="Adversarial Training">
+<meta property="article:tag" content="Robust overfitting">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/12/01/22120101/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/12/01/22120101/","path":"2022/12/01/22120101/","title":"Understanding Robust Overﬁtting of Adversarial Training and Beyond"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Understanding Robust Overﬁtting of Adversarial Training and Beyond | Sam's blog</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Sam's blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sam</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/01/22120101/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sam">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sam's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Understanding Robust Overﬁtting of Adversarial Training and Beyond | Sam's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Understanding Robust Overﬁtting of Adversarial Training and Beyond
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-01 20:16:27 / Modified: 21:39:52" itemprop="dateCreated datePublished" datetime="2022-12-01T20:16:27+08:00">2022-12-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Paper-Reading/" itemprop="url" rel="index"><span itemprop="name">Paper Reading</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Paper-Reading/Adversarial-Training/" itemprop="url" rel="index"><span itemprop="name">Adversarial Training</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Paper-Reading/Adversarial-Training/Robust-overfitting/" itemprop="url" rel="index"><span itemprop="name">Robust overfitting</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="f0c9fcfb7a338da2c8d2ae364767f6ecb03711325824d7689626586c6302a440">9cac1be165add822563775e90613bac195ab46a7fdbcc0bf5344c7ab0794244c079f19db908c62e6abe81ae8ac897439beed54e2c259c998dc23193be1be94fe1047719bdd82953fe9cd2e9f44c0ef74e6a41e22b7661560ee9ec601235d445cb9598d2ecc26c25c2b03e81b57f38d2b80c36afc02f56e83a9d84f557d099d6d5c168e618c7f218539e90eedd3ba992ca4d0e99bc0d8209fdfcfa8d43c339430011bd09b5d4a80b12912637587073ea0daf7adef407d6d6762cbba00e149a2038466a827e13fd9c6b96affdc8841278de0f997de72d595a145a0397b75e3b98ff591374132864891090e66d18d68f87a9e174dda90211fb616012a2deb7ff033ec62999f8bd40f6816622d8a5f50b0ce8c7aec6878474370217038130cc3f6ffbc42b54392dfe11acf3b8e309693310449d18d77ff5cd17cfe9198d318a336aa9c64b0de74e4592cf53f441bc8fde740ff2f48bdacaddd59ab536557f0a9028406ad2e47dbd7e604a666370e777c7abc1aa4137268711aa888cfca777e485ed1aa69f2a6e186e3f8f6047a72e6aa637d74621ef6796c48c4c30f0495c0b019d36ca6a3fdd8b3a5bb7d558fb6fcf5c3e356a3d0e64942709a9a2823559dae2c6088bc15a976c076ca09265bb309689879e8d611f71a8a1503859c50170075af2d6c263a5c5cc5a1c1e5fa55b01feaffc98f8795106e7624fcef032470f316d3be52ccf6d5acdb9aa5215ab76ade7be21e2123ff81948a375e267f66fd8eb125da30b4f013c591e802d6232d6c6ab3f70f14dd2805fa2df5cd070b575ba73153ab0fa6fb50a2eaafcd83fea8e75a7df132efbca7946ede33e610d183bc867997dc9229a32024368ffd15a91aaa3c2d0f32f6867b1b1733aceb4646f10e15f5a1cf698daeff7f21819915986d692e6144d3ae2fa26992caabba2d6a9f834bcf64d58557bc454a04bd84481a5fcb15da2f6a12180e39f913882518ff940c88452162dc8b3604b3eabbf0ed4eee7fb47018347cf63a66c7c2f0dbfd7b4a7aa32bc86d3c923170e5482ea85cec73cd1d64cc55aec8340619371a186a17790203e8c93ae0a24e12cb1c12d181662a1515c97a2b56ca83037e2545f61fc07c5bf18d35d858fc8fd12f8642e0e3bb08a3dad57d2b5b0bc0124742d1f82a10cd6fb27db80fc37f3fe8ba0ade44be1db6d8749d96af46de030dfff1a1a67f60950770aacd0249242d7419189057e84a614813be01b17dad4009c6efa082891c47cf944097b1cdf064e9ff5fa857d8908b594111d28205681f8fd78368171f15cb9248d11bdf0b04129e374613e51a7b04281348798960f1525159233b1489ca11088ca339fc9614b4ad1ca36e1061ad23839879a7ddf31220517bf587befaabaa9256a9efbb5c7114015df457607480d3dd6733e2a74d5b36fca32e9680fb1285fff4de455d138fb08adae67edff3e62fa25a18d700ee0b82ccb495f9ed2c72f9134351787531286a21bb88c0e8d9cbbd6c038da55b57c9f190e33de63412c494ed1e5dcd32035319d767f9f8909c75f1cae5a76d801415b64a2a3d4f55b5eb2b3a2789b8f3876b73e964d3e0a4000b7deff9dc62dd636a16561f7e985a96cbc7e7d833207f7c7dc17beaf7593b8a8b68587b4a34220de46d6ae7ca5d08757e49ad9b71eda2e15cc3a3979ab23986679ac1dc7a7455b7ead6e2de1a1ba3b8116be10bab5b5b24b7edd9774780ba9c45b10261fcf4f9fc3fd900bd27afb4f0d8ca29f2d6f8f71293eb30d0e3d02331e7bb7599eecab6107e660d9f8de22a09ddbd3b55838a7a97cfa1ff66c4770c10871ac4193aad4918a9cf7e3209018057652e637e6dbada62690d7b801617b1011eb5dc70d73e43156b0ee521a496b1300297f6ae40e22785b6af926eeca746a5ca93122500e52369ae20b90116223d545de75738e3e7fd62105d7bbaabc6e9cc787bea7a7a983a783438da1b010c6e9d95e2e4bb37f38b959a222e7cd12ce70272ad077456bb45306fccf10f5731b13343bbf442458a748ea1af1a1271a76751a740f9166f57b720dbb4d7188f181b52dead6fe55e5c96696463636192c1b948d3208441ce719e27ff15a39213ab8810345243a42dfe2971e5d3710335f15cd2e62183e0000e32afcb11985dc1ac6236ff72eaef3bb7954621acfc622317132dd04ece732a01cdce916f7c6fd566d81edf6c7d3919afe82b9c63105c83cf92384b06949ec8f583a78ee7c7e93ed0858bb565e5dcfe3ec8b2c001746aabd13a689e908d315b7b852f7d3ebb93b9df05d4dfeff928366024d84ebb9934f040c802c94e444bc5a5f61b10a47b6315b70b5d7b316d6e95e707cb112a961b4d478f23b73a43756901c8bee6578085220fe07cbd95d62adb88bb34bdd7c79dd34c1405f45309ef90f3b91707b8bc2d6ef4f1dee87dd9c6283aa9e8e8f7c1bbf4afdf2eeb70a4641fdef1b42f3d52bf0352704d628f1cf10e07259d5e9ed5ab206fd5510746e662c5dc35e0c830d07acc00fb164859791009b36f0d0a817b386c9fa5967d9f33a0713f5004d2f839ef27b6e363543b79d8d8e45c740ff766cd5ec6b582bb9948c910dd52a2852e22b4d82799b456053311f68bd2667ed4c75e0cef3f7cd4c219cfaeb683004179d91f7d41c3f6b2a10e1946df4df005540c00cf7b2361d429bd67e93edebe73d86fe96c7da17cc8b0074a1d0c8c12839933a6982ce28a7e8a56f056205ad38c54ffa4c28d9569e0b9d9d0080211ea77ca4e76da2e794265d522f0fe05b68a8c113ed77d3dca85a31e48d1424819fe36fed0e0592d709219febdae4b6b887569da3b8576a37a95c7b51a536c0654e5e494c5352fbf87450277323c0944300eb051be28a211fe4a0d2ee84af0f0ea14fe06f552ef3bd4256be9acc065981c79982356623038962971b41333b0785d074abad7eb6799dc2951b8f54a2d103bb7fc3fd31f99f087cf1dd23175ca199a7abbeb2fec6b4705407a94c56867ae1133aed30befc625821bccb94adb55c9ec88f81c7254cad77d30e8ece35bcc2af7d0e63e8021f84937e40e9cb53cdd088d1f832461db34e6d3e2b6a369734de693edc58e500a9a000833066e5dc3a728342996000871aa05cb2224043e4999decfc51c24ba52e9a867fcbbc16048c67196</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/encrypted/" rel="tag"># encrypted</a>
+              <a href="/tags/Adversarial-Training/" rel="tag"># Adversarial Training</a>
+              <a href="/tags/Robust-overfitting/" rel="tag"># Robust overfitting</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/30/22113003/" rel="prev" title="第二章 期望、矩以及变量的函数">
+                  <i class="fa fa-chevron-left"></i> 第二章 期望、矩以及变量的函数
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/12/01/22120102/" rel="next" title="ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING">
+                  ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sam</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"mhchem":false,"per_page":false,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
