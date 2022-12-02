@@ -21,28 +21,28 @@
 
     <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING">
-<meta property="og:url" content="http://example.com/2022/12/01/22120102/index.html">
+<meta property="og:title" content="HOW DOES LEARNING RATE DECAY HELP MODERN NEURAL NETWORKS?">
+<meta property="og:url" content="http://example.com/2022/12/02/22120201/index.html">
 <meta property="og:site_name" content="Sam&#39;s blog">
 <meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-12-01T14:41:08.000Z">
-<meta property="article:modified_time" content="2022-12-02T16:31:39.846Z">
+<meta property="article:published_time" content="2022-12-02T15:28:20.000Z">
+<meta property="article:modified_time" content="2022-12-02T16:33:05.579Z">
 <meta property="article:author" content="Sam">
 <meta property="article:tag" content="Encrypted">
-<meta property="article:tag" content="Adversarial Training">
-<meta property="article:tag" content="Robust Overfitting">
+<meta property="article:tag" content="Machine Learning">
+<meta property="article:tag" content="Core Machine Learning">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2022/12/01/22120102/">
+<link rel="canonical" href="http://example.com/2022/12/02/22120201/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/12/01/22120102/","path":"2022/12/01/22120102/","title":"ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/12/02/22120201/","path":"2022/12/02/22120201/","title":"HOW DOES LEARNING RATE DECAY HELP MODERN NEURAL NETWORKS?"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING | Sam's blog</title>
+<title>HOW DOES LEARNING RATE DECAY HELP MODERN NEURAL NETWORKS? | Sam's blog</title>
   
 
 
@@ -61,119 +61,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style></head>
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -309,7 +197,7 @@ mjx-container[display="true"] + br {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/01/22120102/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/02/22120201/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -322,12 +210,12 @@ mjx-container[display="true"] + br {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING | Sam's blog">
+      <meta itemprop="name" content="HOW DOES LEARNING RATE DECAY HELP MODERN NEURAL NETWORKS? | Sam's blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING
+          HOW DOES LEARNING RATE DECAY HELP MODERN NEURAL NETWORKS?
         </h1>
 
         <div class="post-meta-container">
@@ -338,14 +226,14 @@ mjx-container[display="true"] + br {
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-12-01 22:41:08" itemprop="dateCreated datePublished" datetime="2022-12-01T22:41:08+08:00">2022-12-01</time>
+      <time title="Created: 2022-12-02 23:28:20" itemprop="dateCreated datePublished" datetime="2022-12-02T23:28:20+08:00">2022-12-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-03 00:31:39" itemprop="dateModified" datetime="2022-12-03T00:31:39+08:00">2022-12-03</time>
+      <time title="Modified: 2022-12-03 00:33:05" itemprop="dateModified" datetime="2022-12-03T00:33:05+08:00">2022-12-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -357,11 +245,11 @@ mjx-container[display="true"] + br {
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Paper-Reading/Adversarial-Training/" itemprop="url" rel="index"><span itemprop="name">Adversarial Training</span></a>
+          <a href="/categories/Paper-Reading/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine Learning</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Paper-Reading/Adversarial-Training/Robust-Overfitting/" itemprop="url" rel="index"><span itemprop="name">Robust Overfitting</span></a>
+          <a href="/categories/Paper-Reading/Machine-Learning/Core/" itemprop="url" rel="index"><span itemprop="name">Core</span></a>
         </span>
     </span>
 
@@ -376,7 +264,7 @@ mjx-container[display="true"] + br {
     
     <div class="post-body" itemprop="articleBody">
         <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="4c54463d25b08b9d63d1df52191d8ca7b199aee80dddfc0b7769ed636cfba0d6">9cac1be165add822563775e90613bac195ab46a7fdbcc0bf5344c7ab0794244cf649d5a368d2a97c9d27207ffe3a1bfca0ce0b2a3a55220670a64c61c2a0656313910b2aa3a5a9c8aa5b967700e4cf4ded935753afa4dbcfb3314f15ccdbbccd4628912ea464a69e77813316653a73feee99df06c8f42e76390f734eb2275bf5bbc46319817d5881164c50369ffc77f3e8c1a0a2127cd7fe15a7a5f1991f22c08b96e46a9a10760b8435a709f1cbf7ae17a1c88e2e9e3a2f10fa766ce0b35918f53f02254ebc125a4341c85f8608325afaa5b278f76eeded648848ccf84090386804057b288d7cbe7238eb4f970860f4d6a50199e09433d3a70b617b906760bd87ec8b4196b94df41f53181d4c4c5948f6e4773e65c84de119a433b9d008b5e6b1bb2a25199ebf13174ddc4b1bfc1e656b04525ebd7e913517ae083a8a4fbbf13a75e0db5ab0abec47839ec54f47a1f569d562b8c224659f4e0420b5be58bb794fd7a9c8fb1eb54057670ce107490881d06f8785a374b111208cc8da4022508e9beb1bdd461afc2920bd0403a78b850e03374a01f51c53b7ef6f6253aa18c45360094f27742b39b48ff04f9dd5d325da3a80d1d585b7d2c290581e240c4e29b11097e915f088e5dced9c49fdf0572706724e2bcf27cef53b889999fccf0f6b25915da330935c14d0e6a3f593e666b2695d97048d8c6a0772e78879069f17ce39e7dfd0f140e563590ad22da64818cbb7d969be9dcd09a47c42211814ace750497856fb1c28067bb7a097a1b1e8ae1c2a6ff192bcbfb3a02dbe1e180e01df074cc12638d04e6c5c53f2ccfa604a81d26e043927209ef9387d5c2fcd332315b3dbbf5954e3e1fef015b1ec9ef56c6d33b1f38357eb7a84877a58bcf6356ba126345426309786e566abb813d95bcb935363833e60b39cc7b385d4ae122682a8332bb09760e85a252773fc9e00f9e974ae9b95e5a6252fa8feff8ae8ecdf4d3f7753ecb9d8f767d640938717c84854e7dbfab98499748bdba4f7a5ab63f11dbe359da8799a30cd3dae1ff3c7226ea4bc25797e358fe62d3e92963058d5890e32c6c75b749488bd1b444678733f770c244284b2638fb36f441c7ded68a42ccf859f3f2c17ebc06fd3fbe9cdda2f42a04e2a44618f93921f2f8fff9f1ceba4521fa8c5801af8c3c203a9bdd2724732e208d38ff95f14e63a2783159499e71d6aea90c30a1499be76ee0b81f3b89189cb144f382dbcbdb05c9d492bea9372a8deea6d37d7b6c34c14c821142ee23ce90943ae922ab71926de2113ff5bc5cead3228145febe6cd70e45f76ece07056c290a7edfe90b7fb1d9a71b5259242fceb200ee174326ed3a5acd4ca8613b43d77a5233222925710dc2811da1d2d1c52674cacca38cb384a89f673985f8f1b373e97354cc5b34ef66b04428fef65a99e566d4261d6473f4f2407a8c6a8245317663e10e7144e95e399fa4bd1b20f2305facd5f5ec4e5debb48179e7b06b85b464ea47a83c71014a92f265fc0a6ef20fb9b2a92e265b8dfa67ce6b3ac4ece6e7d082ca2b1ce5048d44bce217cd1accb1cc27569443bc8bc744d21bd1b70a20f64bb3c66614cf23c59b239d3b7f648ea8c7b983bd654b79e90bd19489839517ca195d40718014e045ab357e14c0a954505305d2981c07442e8a8344b89b15d577a3e0400f1f8e6b6bafa0c686d4d1c1f5ecca7c59ee91da9833d7cef341bc12f4b6409ea46f7f8563153e12f48eaa203636f4eee833774b4124a67de3a7d5612d48b40d9bf0fe2328697572b6d2465c51c30fa6bd77a3efee132836f7b6e8275251a9906f971a09a0294e1e340afe57c944656f066546ec6f1a4ffd81992c14e4aa1b46c60984fcd73c58708262522877b438c9b9f54d6e7c98eec7bc923ae66b98c74ff92509ef8e619a95244155f1ebe0aca8248fa</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="2b357505b2bfb8310e109cc37174387d65baddacb0f5ad3e7c318dcaee63a935">9cac1be165add822563775e90613bac195ab46a7fdbcc0bf5344c7ab0794244ce13a120e9a45873bf1f15148f6c30b2ff81bfe8220ad439ff88f8054a434ad8c1f1445790f9d69a33f5e0352cb88cce417cef3bc0f0018694d517f2f53dd991595a709853e6579ceabc6450e79e3fb4afbf42744810b82611b95f90a295ecde4f73bfb64543cfc7a2a1828df1d8ddb3d54d9b874c010c09089e3e3259dd96ea1c2c3def9105f4e5576c82822d717521ac4d6dfce2e831329d52abe8b80e58272ce6e4003168922b00d44f1535b41fcd7497537b12cd9074451ba452914b81359640b4fb5b154112b6c18594c08df974bc0e01682182e0c09509ab71da16c0dda31f2d88abec0d5e70afc3119df62b7f2995967831e21f0f6f2c1d9c3296dc10675148f713ceed6a2fce84f57a5d96ead0cd9e57715de3f58cdd79c7b127d4101a8c9c4b0aab8e6cf821b88cceffe4cc51b9861595ea6c42d85be7e02567aea20adf19c02969c603094b9d5133d4e586608703e190ce680829712c89e7fabce826420a30ae0bc9698aa596b1bd26b75776938b047b9704cd041cbb44d4349c48a0028fd931000e57c85c54d57ea89b08648edcc2c487a00690e47a093c58063c2adeff13551d800833d7e3cde57d9c9dc64b7a67b6ba91c8c57b0bd215d7a2dcae54af77e2af763cb0c6941d431b478635e3cfab8920a9d464c1e7ead609cb90667a94e910d3e86184e8f4ac2c67d87f2cb8fc32f488b7e44981c4e15adfd7e505fc5576be20106cf4f8e3626b7ccdbbc4018a06c44e39d0ea3b98a33ace63f7bed2db173490a0e749f3468a3e9b539ed1e8b32fbd20c8e14cd3bf40768d374c54a80d0ee49fac6e4c0c36e5832cc992f703a64e92f758521861484f26bf04fe0e452d1aac032df31c5650b19e148e183994a9f44fdfb1f35c56b7a782b5d647b75a8822fbce70e3eec5c4c96fb84044acdbf912402abf0abbe3d17d58e3017693ae11231945f72e31228f8207d9cd1ec5502d786ba379510869979c510009e682bbde929da4c918dd36aecb607623084ab4830795534f447e0e3f8762be2a3ce071d313636efaace68690ed2050fe3abd521a70185d9c6c61717b22384515e893e7dd9511a3f2b394a340ce731830c285f59e772cc03501b21c34066f2767951f0e22ec4799937c151c59ba6a4656a88bc341871be0575f2409f23e96857d00dc5261d723a7839bf425cb6a6d5e9fe89f6a4649d89a3c4d7e7e178b4e3e64bcb6c7f1ef72d3bbfc1abc8ca3f877eb629e239914af57f059e2956723040ced33686019c74c6bd901ad946af70f2c5764982aad7a6194a4913f7834e6871838196f49d54959ef1ca814ecfc39a9ab84ab1ef878ca93126eb468c757f049779c2ef20b116a7f83d7a29fc922d9d63b51e65b855d7f6aa854acdca3f09582b6f2f98210933db08127c62d45c024f7c75dffe2a8f637616d5a07e29acf6063f6e3131f3a2ca286ce174e1dbe42dd501130d5858bb8019e0372cd0b411ed954831ccb2a6acf38d77b1c7c838df88048936e99d1c0f1e7fd23e4d03f00f7710bb9a90880e6cc4493520510f96fbb78c43a3eb38e8e9b91bdbf998573a554d270487ad38618ed409113141d1f318ad774ae1b5ad4f547340a04564a9691fd101bb02659e5f6fa0a7b7008fb127d914eede952b6961b079add2a578c49a11ca8a63be66935b3da75b4617e047becb78d1cbb5a9ab27b3cbe74e03b2b260983b8246452d0bb8374518fd860f2dbc48fe4c7410a76b2b376606dbf1e874a5d04e3f046e55850579d49089f041c27ad296b4c3cea51aa64c6d112bfaf5e6785bd57d5daaa24703b8fa600b9bc9fc4b53d1df4f7ba3c5d7a11d44f71f27d5b949702038f4aa26af5760bf4d0be286dc397ab528a132f209ea3b9879df1fbd2e7198cf4056c955184f8d79be9a58e01200d01543e9607c2d6bd218813bd4f284e45d805a9e951b5a1aa6b2e29b3fcd7a6bc3587d94a5a6f39b916dcb95a21de73b18865fc3dc122f8e1267394843ce5cdc98ed6994aa3dee95efc71c393e47f5ae9305b2fd7e9497ca50523f7cdeac93059cce15986672a41c5ee097cfc7e1eb5af40d5275eb1aa256709f56e0461811fe1317957d5b1152718af67951456d93b4e93cd18eef0ba77f2dae6827b8a79e2e381ec7b8ebda61bb2eb2028e28e38751ac9e192f2bb8f3c0a96eb8f166b00456a75d21534849eb6998886ca43daf7ac6f3e532a776bd91a057d6e6ba8643509155c1c52f357d9f89bb29519b9e62b3433c6014a5263224ae77637b4f64b000960e93d4db7bba69b632842328ae957e382fdec7dd1e95b1e9a00d561800d8ed7a9403ca80d598c994726e7050c1e2a2845394824ab5466272d31f4c235c709854ef741b7b1bf2d742a0d46d3e4183a6b6f6e1f9bec6673d5b7610aa5f4bfca99f7d5d617e23a8dbc7e2e70434275f60772b62f0c626c076cc8b3a346daffb0a1c565e016828640e9df07f10bdf51951336c2a9324a33d0f16e868dbcfd2c2439a98cb53771dbbdf4ce02646c685324fa0637c0eeed01a23931ab9b3fa1476f0bee436c55f460c7acc7eda18b024fc0641c91d90bc9fd7f28167919ca5bcb7c9beee2e940a1b53219f945758c801f5e9ea3700b9d4c7cdd5f9715e0a269c9a93042e31499fe5d561780a5af238d9cc2f2fc5d13b13a08b5aa003b0d0739dffe216dd68ef3af194adb796aa10475bc62fdf1deddac29e4ae0704d194279c2a66b9ba6fefdf843e6788ce2a14bb4959be300d4dad7379e48aa1f7e8fe4853af031c745d6bc590bb24ccc29e78a7be7d936500f8db7307c0cf45d9f1eb65faec74ace2753a53d032e4ce4429c01e679f63c6a4257d5fa8ebe00a0c73841dc62a9db66b63f6b81da04b15ec2e21b7c0950d573eacf64cb1461782e946bc984a67a4c78186ee38f3e2ffe2ddb362d058869933786efdea4603684af75b59ee969a6a8f573699c6b49afffe0f13167904707610b857836affc1ab6669c0a81ca22f26f4f7492b0fad13203f63e45c9bc5c5514cf3ec9bc8d2c2f69c9c7324497a446b7d3d3b9dafa90008172a972beb049a5c0e5f7efdaf2edfc30ed45b5ac48c199abb63f064ce7137871676acbb5f213154636888fca42137bff367f489e4099f9dd0b373ae3775df82320e40fe3e07f380537d02fdfe7ff25fb34ce14931befc5e6945b74bf9c61efdbfc49f964924bf030c5c24860da86ed02af3d611e691fc92acf3e96d0e6429a453ccca28389acccbc5cb2b8825ca8627e8e3863d11c7d6e0248d32ab44a52402397b69b95ea96a1ad140546539deddbc2494c2e2a6a257f9fe29997bddf3534a71e6a831011628869aec85dcae319c95407fd8e42edf02e853a339266ff1d6a30b406f347158309b6e262096f7f65bd539590391d27a5c237c4360caa4c6cd66fa61bfe98512c37e84166f2538a904782b08e9c1143e1616f427db58270836f901e32579f1ee52e37d301e6640505e708a013f11d52569d372bf8405be779fdb0f85db6773185232526d312cf82c511aa2ba7b30825af012485616589b0de315b14efd9e693ba0b0cb101beca5e0f66c9667b4f1c9c35147877bc6dabeb9d4828814dd27b7629c5706baf59e29067a54860ffdebc07bc72c0bf68dd9d47c765334c29e41ffa3c55e524d56704fdf368</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -396,22 +284,19 @@ mjx-container[display="true"] + br {
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Encrypted/" rel="tag"># Encrypted</a>
-              <a href="/tags/Adversarial-Training/" rel="tag"># Adversarial Training</a>
-              <a href="/tags/Robust-Overfitting/" rel="tag"># Robust Overfitting</a>
+              <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+              <a href="/tags/Core-Machine-Learning/" rel="tag"># Core Machine Learning</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/12/01/22120101/" rel="prev" title="Understanding Robust Overﬁtting of Adversarial Training and Beyond">
-                  <i class="fa fa-chevron-left"></i> Understanding Robust Overﬁtting of Adversarial Training and Beyond
+                <a href="/2022/12/01/22120102/" rel="prev" title="ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING">
+                  <i class="fa fa-chevron-left"></i> ROBUST OVERFITTING MAY BE MITIGATED BY PROPERLY LEARNED SMOOTHENING
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/12/02/22120201/" rel="next" title="HOW DOES LEARNING RATE DECAY HELP MODERN NEURAL NETWORKS?">
-                  HOW DOES LEARNING RATE DECAY HELP MODERN NEURAL NETWORKS? <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -473,7 +358,7 @@ mjx-container[display="true"] + br {
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"mhchem":false,"per_page":false,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"mhchem":false,"per_page":false,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
