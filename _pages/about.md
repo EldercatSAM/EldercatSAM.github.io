@@ -25,7 +25,7 @@ Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. s
 - *2025.06*: Won first place in the CVDD and AVA workshops at CVPR 2025.
 - *2025.02*: One paper is accepted by CVPR 2025.
 - *2024.10*: Our paper "Not All Pairs are Equal: Hierarchical Learning for Average-Precision-Oriented Video Retrieval" received an Honourable Mention Award at ACM MM 2024.
-- *2024.07*: One paper is accepted by ACM MM 2024 as an oral presentation.
+- *2024.07*: Two papers are accepted by ACM MM 2024.
 - *2023.09*: One paper is accepted by NeurIPS 2023.
 
 # 📝 Publications
@@ -72,6 +72,8 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM Internati
 
 [DRAUC: An Instance-wise Distributionally Robust AUC Optimization Framework](https://arxiv.org/pdf/2311.03055), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. Annual Conference on Neural Information Processing Systems (**NeurIPS**) 2023. [\[Code\]](https://github.com/EldercatSAM/DRAUC)
 
+
+[Regularized contrastive partial multi-view outlier detection](https://dl.acm.org/doi/pdf/10.1145/3664647.3681125), Yijia Wang, Qianqian Xu, Yangbangyan Jiang, **Siran Dai**, Qingming Huang. ACM International Conference on Multimedia (**ACM MM**), 8711-8720, 2024.
 
 [Exploring Non-contrastive Self-supervised Representation Learning for Image-based Profiling](https://arxiv.org/abs/2506.14265), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. CVPR Workshop on Computer Vision for Drug Discovery (**CVPRW**), 2025.
 
