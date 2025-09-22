@@ -20,13 +20,13 @@ Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. s
 
 
 # 🔥 News
-- *2025.09*: One paper is accepted by NeurIPS.
+- *2025.09*: One paper is accepted by NeurIPS 2025.
 - *2025.09*: One paper is accepted by TPAMI.
 - *2025.06*: Won first place in the CVDD and AVA workshops at CVPR 2025.
 - *2025.02*: One paper is accepted by CVPR 2025.
 - *2024.10*: Our paper "Not All Pairs are Equal: Hierarchical Learning for Average-Precision-Oriented Video Retrieval" received an Honourable Mention Award at ACM MM 2024.
 - *2024.07*: One paper is accepted by ACM MM 2024 as an oral presentation.
-- *2023.09*: One paper is accepted by NeurIPS.
+- *2023.09*: One paper is accepted by NeurIPS 2023.
 
 # 📝 Publications
 
@@ -63,7 +63,7 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. IEEE/CVF Comp
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2024 (Honourable Mention Award)</div><img src='images/papers/acmmm24.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Not All Pairs are Equal: Hierarchical Learning for Average-Precision-Oriented Video Retrieval](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_When_the_Future_Becomes_the_Past_Taming_Temporal_Correspondence_for_CVPR_2025_paper.pdf)
+[Not All Pairs are Equal: Hierarchical Learning for Average-Precision-Oriented Video Retrieval](https://arxiv.org/pdf/2407.15566)
 
 Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM International Conference on Multimedia (**ACM MM**), 3828-3837, 2024. [\[Code\]](https://github.com/yafeng19/HAP-VR)
 
