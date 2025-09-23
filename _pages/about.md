@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. student at the Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS), supervised by [Qingming Huang (&#40644;&#24198;&#26126;)](http://people.ucas.ac.cn/~qmhuang) (Professor at UCAS; IEEE Fellow) and [Qianqian Xu (许倩倩)](https://qianqianxu010.github.io/) (Professor at ICT, CAS). I received a B.E. in Robotics Engineering from BJUT in 2022. My research interests include *self-supervised learning* and *information theory*.
+Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. student at the Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS), supervised by [Qingming Huang (&#40644;&#24198;&#26126;)](http://people.ucas.ac.cn/~qmhuang) (Professor at UCAS; IEEE Fellow) and [Qianqian Xu (许倩倩)](https://qianqianxu010.github.io/) (Professor at ICT, CAS). I received a B.E. in Robotics Engineering from BJUT in 2022. My research interests include *Self-supervised Learning* and *Information Theory*.
 
 
 # 🔥 News
@@ -78,8 +78,8 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM Internati
 [Exploring Non-contrastive Self-supervised Representation Learning for Image-based Profiling](https://arxiv.org/abs/2506.14265), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. CVPR Workshop on Computer Vision for Drug Discovery (**CVPRW**), 2025.
 
 # 🎖 Honors and Awards
-- *2025.06*: First place in [CVPR 2025 Computer Vision for Drug Discovery Challenge](https://cvdd-cvpr25.github.io/challenge.html).
-- *2025.05*: First place in [CVPR 2025 AVA Challenge of 3D Human Motion Generation Track](https://accessibility-cv.github.io/).
+- *2025.06*: First place in [CVPR 2025 AVA Challenge of 3D Human Motion Generation Track](https://accessibility-cv.github.io/).
+- *2025.05*: First place in [CVPR 2025 Cell Line Transferability Challenge](https://cvdd-cvpr25.github.io/challenge.html).
 - *2024.10*: ACM MM 2024 Honourable Mention Award.
 - *2021.10*: Xiaomi Special Scholarship.
 - *2020.10*: Xiaomi Special Scholarship.
