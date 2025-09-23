@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. student at the Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS), supervised by [Qingming Huang (&#40644;&#24198;&#26126;)](http://people.ucas.ac.cn/~qmhuang) (Professor at UCAS; IEEE Fellow). I received a B.E. in Robotics Engineering from BJUT in 2022. My research interests include *self-supervised learning* and *information theory*.
+Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. student at the Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS), supervised by [Qingming Huang (&#40644;&#24198;&#26126;)](http://people.ucas.ac.cn/~qmhuang) (Professor at UCAS; IEEE Fellow) and [Qianqian Xu (许倩倩)](https://qianqianxu010.github.io/) (Professor at ICT, CAS). I received a B.E. in Robotics Engineering from BJUT in 2022. My research interests include *self-supervised learning* and *information theory*.
 
 
 # 🔥 News
