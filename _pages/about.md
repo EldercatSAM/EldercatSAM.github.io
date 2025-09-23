@@ -89,7 +89,7 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM Internati
 # 📖 Services
 - Reviewer for NeurIPS 24/25
 - Reviewer for ICLR 24/25
-- Reviewer for AISTATS 23/24/25
+- Reviewer for AISTATS 24/25
 - Reviewer for TPAMI/TCSVT/TMM
 
 # 🎓 Education
