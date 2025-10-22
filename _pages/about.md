@@ -33,7 +33,7 @@ Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. s
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/papers/neurips25.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Exploring Performance Degradation in Dense Tasks for Self-supervised Learning](https://arxiv.org/abs/2503.15096)
+[Exploring Structural Degradation in Dense Representations for Self-supervised Learning](https://arxiv.org/abs/2503.15096)
 
 **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. Annual Conference on Neural Information Processing Systems (**NeurIPS**) 2025. [\[Code\]](https://github.com/EldercatSAM/SSL-Degradation?)
 </div>
