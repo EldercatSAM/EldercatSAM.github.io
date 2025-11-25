@@ -20,6 +20,7 @@ Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. s
 
 
 # 🔥 News
+- *2025.11*: One paper is accepted by AAAI 2026.
 - *2025.09*: One paper is accepted by NeurIPS 2025.
 - *2025.09*: One paper is accepted by TPAMI.
 - *2025.06*: Won first place in the CVDD and AVA workshops at CVPR 2025.
@@ -70,12 +71,26 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM Internati
 </div>
 </div>
 
-[DRAUC: An Instance-wise Distributionally Robust AUC Optimization Framework](https://arxiv.org/pdf/2311.03055), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. Annual Conference on Neural Information Processing Systems (**NeurIPS**) 2023. [\[Code\]](https://github.com/EldercatSAM/DRAUC)
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPRW 2025</div><img src='images/papers/cvprw25.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
+[Self-supervised Representation Learning with Local Aggregation for Image-based Profiling](https://arxiv.org/abs/2506.14265), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. CVPR Workshop on Computer Vision for Drug Discovery (**CVPRW**), 2025.
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='images/papers/aaai26.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[HiGFA: Hierarchical Guidance for Fine-grained Data Augmentation with Diffusion Models](https://arxiv.org/pdf/2511.12547), Zhiguang Lu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. Annual AAAI Conference on Artificial Intelligence (**AAAI**), 2026.
+
+</div>
+</div>
+
+[DRAUC: An Instance-wise Distributionally Robust AUC Optimization Framework](https://arxiv.org/pdf/2311.03055), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. Annual Conference on Neural Information Processing Systems (**NeurIPS**) 2023. [\[Code\]](https://github.com/EldercatSAM/DRAUC)
 
 [Regularized contrastive partial multi-view outlier detection](https://dl.acm.org/doi/pdf/10.1145/3664647.3681125), Yijia Wang, Qianqian Xu, Yangbangyan Jiang, **Siran Dai**, Qingming Huang. ACM International Conference on Multimedia (**ACM MM**), 8711-8720, 2024.
 
-[Exploring Non-contrastive Self-supervised Representation Learning for Image-based Profiling](https://arxiv.org/abs/2506.14265), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. CVPR Workshop on Computer Vision for Drug Discovery (**CVPRW**), 2025.
 
 # 🎖 Honors and Awards
 - *2025.06*: First place in [CVPR 2025 AVA Challenge of 3D Human Motion Generation Track](https://accessibility-cv.github.io/).
@@ -90,7 +105,8 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM Internati
 - Reviewer for NeurIPS 24/25
 - Reviewer for ICLR 24/25
 - Reviewer for AISTATS 24/25
-- Reviewer for TPAMI/TCSVT/TMM
+- Reviewer for CVPR 26
+- Reviewer for TPAMI/TMLR/TCSVT/TMM
 
 # 🎓 Education
 
