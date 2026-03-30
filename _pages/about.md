@@ -20,6 +20,7 @@ Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. s
 
 
 # 🔥 News
+- *2026.03*: Two papers are accepted by CVPR 2026.
 - *2025.11*: One paper is accepted by AAAI 2026.
 - *2025.09*: One paper is accepted by NeurIPS 2025.
 - *2025.09*: One paper is accepted by TPAMI.
@@ -104,8 +105,10 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM Internati
 # 📖 Services
 - Reviewer for NeurIPS 24/25
 - Reviewer for ICLR 24/25
-- Reviewer for AISTATS 24/25
+- Reviewer for ICML 26
 - Reviewer for CVPR 26
+- Reviewer for KDD 26
+- Reviewer for AISTATS 24/25
 - Reviewer for TPAMI/TMLR/TCSVT/TMM
 
 # 🎓 Education
