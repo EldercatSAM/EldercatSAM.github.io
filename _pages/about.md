@@ -59,23 +59,22 @@ My research interests include:
 </div>
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2023</div><img src='images/papers/neurips23.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[DRAUC: An Instance-wise Distributionally Robust AUC Optimization Framework](https://arxiv.org/pdf/2311.03055)
+
+**Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. Annual Conference on Neural Information Processing Systems (**NeurIPS**) 2023. [\[Code\]](https://github.com/EldercatSAM/DRAUC)
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='images/papers/cvpr26.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [From Static to Dynamic: Exploring Self-supervised Image-to-Video Representation Transfer Learning](https://arxiv.org/abs/2603.26597)
 
 Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Xilin Zhao, Qingming Huang. IEEE/CVF Computer Vision and Pattern Recognition Conference (**CVPR**), 2026. [\[Code\]](https://github.com/yafeng19/Co-Settle)
-
-</div>
-</div>
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/papers/slotjepa26.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Slot-JEPA: Object-Structured Prediction Interfaces for Latent World Models](https://arxiv.org/abs/2610.28074)
-
-Peisong Wen, Qianqian Xu, Minye Lei, **Siran Dai**, Yang Liu, Qingming Huang. arXiv preprint arXiv:2610.28074, 2026.
 
 </div>
 </div>
@@ -111,25 +110,15 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM Internati
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPRW 2025</div><img src='images/papers/cvprw25.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Self-supervised Representation Learning with Local Aggregation for Image-based Profiling](https://arxiv.org/abs/2506.14265), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. CVPR Workshop on Computer Vision for Drug Discovery (**CVPRW**), 2025.
-
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='images/papers/aaai26.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+[Safe Codebook: Token-Level Moderation for Safer Visual Autoregressive Generation](https://openaccess.thecvf.com/content/CVPR2026F/html/Zhang_Safe_Codebook_Token-Level_Moderation_for_Safer_Visual_Autoregressive_Generation_CVPRF_2026_paper.html), Jiaxuan Zhang, Qianqian Xu, Peisong Wen, **Siran Dai**, Yang Liu, Qingming Huang. IEEE/CVF Computer Vision and Pattern Recognition Conference Findings (**CVPR Findings**), 7924-7934, 2026.
 
 [HiGFA: Hierarchical Guidance for Fine-grained Data Augmentation with Diffusion Models](https://arxiv.org/pdf/2511.12547), Zhiguang Lu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. Annual AAAI Conference on Artificial Intelligence (**AAAI**), 2026.
 
-</div>
-</div>
-
-[DRAUC: An Instance-wise Distributionally Robust AUC Optimization Framework](https://arxiv.org/pdf/2311.03055), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. Annual Conference on Neural Information Processing Systems (**NeurIPS**) 2023. [\[Code\]](https://github.com/EldercatSAM/DRAUC)
+[Self-supervised Representation Learning with Local Aggregation for Image-based Profiling](https://arxiv.org/abs/2506.14265), **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. CVPR Workshop on Computer Vision for Drug Discovery (**CVPRW**), 2025.
 
 [Regularized contrastive partial multi-view outlier detection](https://dl.acm.org/doi/pdf/10.1145/3664647.3681125), Yijia Wang, Qianqian Xu, Yangbangyan Jiang, **Siran Dai**, Qingming Huang. ACM International Conference on Multimedia (**ACM MM**), 8711-8720, 2024.
+
+[Slot-JEPA: Object-Structured Prediction Interfaces for Latent World Models](https://arxiv.org/abs/2610.28074), Peisong Wen, Qianqian Xu, Minye Lei, **Siran Dai**, Yang Liu, Qingming Huang. arXiv preprint arXiv:2610.28074, 2026.
 
 [MobileDreamer: Generative Sketch World Model for GUI Agent](https://arxiv.org/abs/2601.04035), Yilin Cao, Yufeng Zhong, Zhixiong Zeng, **Siran Dai**, Liming Zheng, Jing Huang, Haibo Qiu, Peng Shi, Wenji Mao. arXiv preprint arXiv:2601.04035, 2026.
 
