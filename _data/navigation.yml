@@ -15,12 +15,12 @@ main:
   - title: "Services"
     url: "/#-services"
 
-  - title: "Educations"
-    url: "/#-educations"
+  - title: "Education"
+    url: "/#-education"
+
+  - title: "Internships"
+    url: "/#-internships"
 
   # - title: "Invited Talks"
   #   url: "/#-invited-talks"
-
-  # - title: "Internships"
-  #   url: "/#-internships"
     

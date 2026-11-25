@@ -16,10 +16,17 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. student at the Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS), supervised by [Qingming Huang (&#40644;&#24198;&#26126;)](http://people.ucas.ac.cn/~qmhuang) (Professor at UCAS; IEEE Fellow) and [Qianqian Xu (许倩倩)](https://qianqianxu010.github.io/) (Professor at ICT, CAS). I received a B.E. in Robotics Engineering from BJUT in 2022. My research interests include *Self-supervised Learning* and *Information Theory*.
+Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a final-year Ph.D. student at the Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS), supervised by [Qingming Huang (&#40644;&#24198;&#26126;)](http://people.ucas.ac.cn/~qmhuang) (Professor at UCAS; IEEE Fellow) and [Qianqian Xu (许倩倩)](https://qianqianxu010.github.io/) (Professor at ICT, CAS). I received a B.E. in Robotics Engineering from BJUT in 2022. I am currently a research intern at the [Beijing Academy of Artificial Intelligence (BAAI)](https://www.baai.ac.cn/), working on AI agents.
 
+My research interests include:
+- **Vision Foundation Models and Representation Learning**: understanding and improving the structure of dense representations of self-supervised vision foundation models.
+- **Temporal State Modeling and Physical AI**: temporally consistent, state-aware visual representations for latent world models and robotic manipulation.
+- **AI Agents**: test-time self-evolving agents and the evaluation of long-horizon web agents.
 
 # 🔥 News
+- *2026.11*: One paper is accepted by TPAMI.
+- *2026.09*: One paper (CODI) is accepted by NeurIPS 2026.
+- *2026.06*: Won 1st and 2nd place in the CVPR 2026 DataMFM Challenge.
 - *2026.03*: Two papers are accepted by CVPR 2026.
 - *2025.11*: One paper is accepted by AAAI 2026.
 - *2025.09*: One paper is accepted by NeurIPS 2025.
@@ -32,12 +39,44 @@ Hi! Welcome to my homepage. I'm **Siran Dai (戴思然)**, a fourth-year Ph.D. s
 
 # 📝 Publications
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div><img src='images/papers/neurips26.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[CODI: Improving Self-Supervised Vision Transformers with Cross Distillation](https://arxiv.org/abs/2610.30639)
+
+**Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Xiaochun Cao, Qingming Huang. Annual Conference on Neural Information Processing Systems (**NeurIPS**) 2026. [\[Code\]](https://github.com/EldercatSAM/CODI)
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/papers/neurips25.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Exploring Structural Degradation in Dense Representations for Self-supervised Learning](https://arxiv.org/abs/2510.17299)
 
 **Siran Dai**, Qianqian Xu, Peisong Wen, Yang Liu, Qingming Huang. Annual Conference on Neural Information Processing Systems (**NeurIPS**) 2025. [\[Code\]](https://github.com/EldercatSAM/SSL-Degradation)
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='images/papers/cvpr26.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[From Static to Dynamic: Exploring Self-supervised Image-to-Video Representation Transfer Learning](https://arxiv.org/abs/2603.26597)
+
+Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Xilin Zhao, Qingming Huang. IEEE/CVF Computer Vision and Pattern Recognition Conference (**CVPR**), 2026. [\[Code\]](https://github.com/yafeng19/Co-Settle)
+
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/papers/slotjepa26.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Slot-JEPA: Object-Structured Prediction Interfaces for Latent World Models](https://arxiv.org/abs/2610.28074)
+
+Peisong Wen, Qianqian Xu, Minye Lei, **Siran Dai**, Yang Liu, Qingming Huang. arXiv preprint arXiv:2610.28074, 2026.
+
 </div>
 </div>
 
@@ -92,27 +131,36 @@ Yang Liu, Qianqian Xu, Peisong Wen, **Siran Dai**, Qingming Huang. ACM Internati
 
 [Regularized contrastive partial multi-view outlier detection](https://dl.acm.org/doi/pdf/10.1145/3664647.3681125), Yijia Wang, Qianqian Xu, Yangbangyan Jiang, **Siran Dai**, Qingming Huang. ACM International Conference on Multimedia (**ACM MM**), 8711-8720, 2024.
 
+[MobileDreamer: Generative Sketch World Model for GUI Agent](https://arxiv.org/abs/2601.04035), Yilin Cao, Yufeng Zhong, Zhixiong Zeng, **Siran Dai**, Liming Zheng, Jing Huang, Haibo Qiu, Peng Shi, Wenji Mao. arXiv preprint arXiv:2601.04035, 2026.
+
 
 # 🎖 Honors and Awards
+- *2026.06*: 1st and 2nd place in the CVPR 2026 DataMFM Challenge (Document Parsing), hosted by MIT-IBM.
 - *2025.06*: First place in [CVPR 2025 AVA Challenge of 3D Human Motion Generation Track](https://accessibility-cv.github.io/).
 - *2025.05*: First place in [CVPR 2025 Cell Line Transferability Challenge](https://cvdd-cvpr25.github.io/challenge.html).
 - *2024.10*: ACM MM 2024 Honourable Mention Award.
-- *2021.10*: Xiaomi Special Scholarship.
-- *2020.10*: Xiaomi Special Scholarship.
+- *2021.10*: Xiaomi Special Scholarship (10 recipients university-wide).
+- *2021.08*: Silver Medal (Top 1%) in the Kaggle CommonLit Readability Prize.
+- *2020.10*: Xiaomi Special Scholarship (10 recipients university-wide).
 - *2020.10*: National Scholarship.
 
 
 # 📖 Services
-- Reviewer for NeurIPS 24/25
-- Reviewer for ICLR 24/25
+- Reviewer for NeurIPS 24/25/26
+- Reviewer for ICLR 24/25/26/27
 - Reviewer for ICML 26
-- Reviewer for CVPR 26
+- Reviewer for CVPR 26/27
+- Reviewer for ECCV 26
 - Reviewer for KDD 26
-- Reviewer for AISTATS 24/25
+- Reviewer for AISTATS 24/25/26/27
 - Reviewer for TPAMI/TMLR/TCSVT/TMM
 
 # 🎓 Education
 
 - *2022.09 - Now*, Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS), Ph.D. student in Computer Applied Technology.
-- *2018.09 - 2022.06*, Beijing University of Technology (BJUT), B.E. in Robotics Engineering.
+- *2018.09 - 2022.07*, Beijing University of Technology (BJUT), B.E. in Robotics Engineering.
+
+# 💻 Internships
+
+- *2026.05 - Now*, [Beijing Academy of Artificial Intelligence (BAAI)](https://www.baai.ac.cn/), Research Intern on AI Agents. 
 
